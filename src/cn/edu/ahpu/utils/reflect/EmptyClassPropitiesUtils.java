@@ -66,7 +66,7 @@ public class EmptyClassPropitiesUtils {
 	}
 	
 	public static void main(String[] args) {
-		TUser user = new TUser(1l,"½¯»³Ë«",18,new Date(),6800.00d);
+		TUser user = new TUser(1l,"Àï°ÂÄÏ",18,new Date(),6800.00d);
 		System.out.println(user);
 		System.out.println("--------------------------");
 		emptyClassPropities(user,"id");
