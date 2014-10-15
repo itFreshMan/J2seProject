@@ -37,7 +37,7 @@ public class EmptyClassPropitiesUtils {
 					if(propertiesList != null && propertiesList.contains(propertyName)){
 						//ignore
 					}else{
-						//È·±£set·½·¨ ÓĞÇÒÖ»ÓĞÒ»¸ö²ÎÊı;
+						//ç¡®ä¿setæ–¹æ³• æœ‰ä¸”åªæœ‰ä¸€ä¸ªå‚æ•°;
 						Class parameterTypesClazz = method.getParameterTypes() == null ? null : method.getParameterTypes().length > 1? null : method.getParameterTypes()[0];
 						if(parameterTypesClazz != null ){
 							String parameterName = parameterTypesClazz.getName();
@@ -66,7 +66,7 @@ public class EmptyClassPropitiesUtils {
 	}
 	
 	public static void main(String[] args) {
-		TUser user = new TUser(1l,"Àï°ÂÄÏ",18,new Date(),6800.00d);
+		TUser user = new TUser(1l,"é‡Œå¥¥å—å¤š",18,new Date(),6800.00d);
 		System.out.println(user);
 		System.out.println("--------------------------");
 		emptyClassPropities(user,"id");
