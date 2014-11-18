@@ -93,12 +93,10 @@ public class CheckFile {
 	
 	public static void main(String[] args) throws Exception {
 		ArrayList<String> args0 = new ArrayList<String>();
-		args0.add("池州");
-		args0.add("九华");
-//		args0.add("利辛");
-		String args1 = "C:\\check_doc\\利辛农商银行绩效考核建设方案V0.1";
+		args0.add("cz");
+		args0.add("jh");
+		String args1 = "C:\\check_doc\\******";
 		
-//		 args1 = "C:\\check_doc\\利辛农商银行绩效考核建设方案V0.1\\项目上线软件发布登记表.xls";
 		
 		new CheckFile(args0,args1).doCheck();
 	}

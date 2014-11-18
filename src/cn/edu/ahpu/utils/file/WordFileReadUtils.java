@@ -92,6 +92,6 @@ public class WordFileReadUtils {
 
 	public static void main(String[] args) throws Exception {
 		String projectPath = System.getProperty("user.dir");
-		wordFileRead(projectPath + "/filesForder/docs/利辛数据服务平台概要设计方案V1.0.doc");
+		wordFileRead(projectPath + "/filesForder/docs/**********8.doc");
 	}
 }
