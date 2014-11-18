@@ -1,10 +1,7 @@
 package cn.edu.ahpu.utils.file;
 
-import java.io.BufferedReader;
 import java.io.File;
-import java.io.FileReader;
 import java.util.ArrayList;
-
 /**
  * 检测某一文件夹下或者文件 中是否包含关键字
  * @author JHS
@@ -37,7 +34,27 @@ public class CheckFile {
 	}
 	private static int fileIndex = 1;
 	public void readFileAndCheck(File f) throws Exception{
-		System.out.println(fileIndex+"、开始检测文件【"+f.getName()+"】");
+		String path = f.getParent();
+		String file = path+"/"+f.getName();
+		String type = file.substring(file.lastIndexOf(".")).toLowerCase();
+		System.out.println(fileIndex+"、开始检测文件【"+file+"】");
+		String text = null;
+		if(type.endsWith(".doc") || type.endsWith(".docx")){
+			text = WordFileReadUtils.wordFileRead(file);
+		}else if (type.equals("xls") || !type.equals("xlsx")) {
+			text = ExcelFileReadUtils.excelFileRead(file);
+		}else{
+			text = TxtFileReadUtils.txtFileRead(file);
+		}
+		
+		String word = stringContainsWords(text);
+		if(word != null){
+			System.out.println(" 【warn】包含关键字:"+word);
+		}
+		System.out.println();
+		
+		fileIndex++;
+		/*
 		BufferedReader br=new BufferedReader(new FileReader(f));
 		int lineCount = 1;
 		while(br.ready()){
@@ -45,12 +62,13 @@ public class CheckFile {
 			String word = stringContainsWords(line);
 			if(word != null){
 //				System.out.println(" 【"+f.getName()+"】第"+lineCount+" 包含关键字:"+word);
-				System.out.println("[warn]第"+lineCount+" 包含关键字:"+word);
+				System.out.println("[warn]第"+lineCount+" 包含关键字:"+word+":"+line);
 			}
 			lineCount++;
 		}
+		br.close();
 		System.out.println();
-		fileIndex++;
+		fileIndex++;*/
 	}
 	
 	public String stringContainsWords(String line){
@@ -77,8 +95,10 @@ public class CheckFile {
 		ArrayList<String> args0 = new ArrayList<String>();
 		args0.add("池州");
 		args0.add("九华");
-		args0.add("利辛");
-		String args1 = "C:\\check_doc\\利辛数据服务管理平台管理办法";
+//		args0.add("利辛");
+		String args1 = "C:\\check_doc\\利辛农商银行绩效考核建设方案V0.1";
+		
+//		 args1 = "C:\\check_doc\\利辛农商银行绩效考核建设方案V0.1\\项目上线软件发布登记表.xls";
 		
 		new CheckFile(args0,args1).doCheck();
 	}

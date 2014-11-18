@@ -3,5 +3,16 @@
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.7"/>
 	<classpathentry kind="lib" path="libs/junit-4.10.jar"/>
+	<classpathentry kind="lib" path="libs/poi-3.10.1-20140818.jar"/>
+	<classpathentry kind="lib" path="libs/poi-examples-3.10.1-20140818.jar"/>
+	<classpathentry kind="lib" path="libs/poi-excelant-3.10.1-20140818.jar"/>
+	<classpathentry kind="lib" path="libs/poi-ooxml-3.10.1-20140818.jar"/>
+	<classpathentry kind="lib" path="libs/poi-ooxml-schemas-3.10.1-20140818.jar"/>
+	<classpathentry kind="lib" path="libs/poi-scratchpad-3.10.1-20140818.jar"/>
+	<classpathentry kind="lib" path="libs/tm-extractors-0.4.jar"/>
+	<classpathentry kind="lib" path="libs/slf4j-api-1.7.2.jar"/>
+	<classpathentry kind="lib" path="libs/xmlbeans-2.3.0.jar"/>
+	<classpathentry kind="lib" path="libs/dom4j-1.6.1.jar"/>
+	<classpathentry kind="lib" path="libs/xmlbeans-2.6.0.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
